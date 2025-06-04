@@ -1,0 +1,2 @@
+# ArkeniaProject
+OLLAMA (MISTRAL) 
