@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 784315697}
   - component: {fileID: 784315701}
   - component: {fileID: 784315703}
-  - component: {fileID: 784315702}
+  - component: {fileID: 784315704}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -991,26 +991,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &784315702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784315696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b023ceb588cbbc4387b5e4000e46b3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MMOPlayerController
-  moveSpeed: 5
-  sprintMultiplier: 1.5
-  acceleration: 10
-  gravity: 0
-  jumpHeight: 1.5
-  rotationSpeedDegPerSec: 360
-  rotationInputDeadZone: 0.12
-  inputActions: {fileID: 0}
 --- !u!143 &784315703
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1036,6 +1016,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &784315704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784315696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b023ceb588cbbc4387b5e4000e46b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MMOPlayerController
+  Target: {fileID: 1744589538}
+  FollowDistance: 5.5
+  HeightOffset: 2
+  PositionDamping: 0.18
+  RotationDamping: 0.12
 --- !u!1 &809438576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,7 +1378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 16, y: 16}
+  m_AnchoredPosition: {x: 260, y: 130}
   m_SizeDelta: {x: 520, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086937324
@@ -1400,7 +1397,7 @@ MonoBehaviour:
   chatHistoryText: {fileID: 1451341417}
   chatInputField: {fileID: 809438578}
   sendButton: {fileID: 366924869}
-  aiCompanionManager: {fileID: 0}
+  aiCompanionManager: {fileID: 774242534}
 --- !u!114 &1086937325
 MonoBehaviour:
   m_ObjectHideFlags: 0
