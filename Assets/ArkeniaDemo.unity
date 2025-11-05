@@ -201,8 +201,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1590134258}
   m_HandleRect: {fileID: 1590134257}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 0.99999994
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -864,6 +864,7 @@ GameObject:
   - component: {fileID: 784315698}
   - component: {fileID: 784315697}
   - component: {fileID: 784315701}
+  - component: {fileID: 784315703}
   - component: {fileID: 784315702}
   m_Layer: 0
   m_Name: Main Camera
@@ -1001,11 +1002,40 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b023ceb588cbbc4387b5e4000e46b3e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCameraController
-  target: {fileID: 1744589538}
-  offset: {x: 0, y: 3, z: -6}
-  followSmoothTime: 0.1
-  rotationSmoothTime: 0.2
+  m_EditorClassIdentifier: Assembly-CSharp::MMOPlayerController
+  moveSpeed: 5
+  sprintMultiplier: 1.5
+  acceleration: 10
+  gravity: 0
+  jumpHeight: 1.5
+  rotationSpeedDegPerSec: 360
+  rotationInputDeadZone: 0.12
+  inputActions: {fileID: 0}
+--- !u!143 &784315703
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784315696}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &809438576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1578,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1052928166}
   m_HandleRect: {fileID: 1052928165}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2053,14 +2083,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1744589532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5904dcbf1ee8134fa41721a35cffbab, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c923059438f71946a86634d78ebc410, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MMOPlayerController
+  m_EditorClassIdentifier: Assembly-CSharp::ArkenPlayerController
   moveSpeed: 5
   sprintMultiplier: 1.5
   acceleration: 10
   gravity: -9.81
   jumpHeight: 1.5
+  rotationSpeedDegPerSec: 240
+  rotationInputDeadZone: 0.12
   inputActions: {fileID: 0}
 --- !u!1 &1892808183
 GameObject:
