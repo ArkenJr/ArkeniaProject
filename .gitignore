@@ -1,0 +1,22 @@
+# Unity (generated)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]serSettings/
+Packages/com.unity.collab-proxy/
+sysinfo.txt
+
+# IDE noise
+*.csproj
+*.sln
+*.user
+*.userprefs
+
+# Archives & OS junk
+*.zip
+.DS_Store
+Thumbs.db
