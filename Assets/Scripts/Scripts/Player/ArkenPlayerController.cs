@@ -1,9 +1,8 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
 /// Third-person MMO-style controller using Unity Input System.
-/// New name so it can't conflict with any old duplicates.
 /// Requires a CharacterController on the same GameObject.
 /// </summary>
 [RequireComponent(typeof(CharacterController))]
@@ -71,7 +70,7 @@ public class ArkenPlayerController : MonoBehaviour
     {
         ReadInput();
         ApplyMovement();
-        ApplyGravityAndJump(); // one call, one method
+        ApplyGravityAndJump();
     }
 
     private void SetupInputActions()
@@ -112,7 +111,6 @@ public class ArkenPlayerController : MonoBehaviour
 
     private void ApplyMovement()
     {
-        // Local input XZ
         Vector3 move = new Vector3(currentMoveInput.x, 0f, currentMoveInput.y);
         move = transform.TransformDirection(move);
 
@@ -128,7 +126,6 @@ public class ArkenPlayerController : MonoBehaviour
         Vector3 movement = (magnitude > 0f ? move.normalized : Vector3.zero) * currentSpeed;
         characterController.Move(movement * Time.deltaTime);
 
-        // Turn with fixed degrees-per-second (prevents super-snappy yaw)
         if (move != Vector3.zero && currentMoveInput.magnitude >= rotationInputDeadZone)
         {
             Quaternion targetRotation = Quaternion.LookRotation(move.normalized, Vector3.up);

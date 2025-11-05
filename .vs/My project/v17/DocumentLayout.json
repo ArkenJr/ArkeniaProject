@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Gabri\\OneDrive\\Documents\\GitHub\\ArkeniaProject\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabri\\OneDrive\\Documents\\GitHub\\ArkeniaProject\\My project\\Assets\\Scripts\\Scripts\\Camera\\ThirdPersonCameraController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Scripts\\Camera\\ThirdPersonCameraController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabri\\OneDrive\\Documents\\GitHub\\ArkeniaProject\\My project\\Assets\\Scripts\\Scripts\\Player\\ArkenPlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Scripts\\Player\\ArkenPlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ThirdPersonCameraController.cs",
-              "DocumentMoniker": "C:\\Users\\Gabri\\OneDrive\\Documents\\GitHub\\ArkeniaProject\\My project\\Assets\\Scripts\\Scripts\\Camera\\ThirdPersonCameraController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Scripts\\Camera\\ThirdPersonCameraController.cs",
-              "ToolTip": "C:\\Users\\Gabri\\OneDrive\\Documents\\GitHub\\ArkeniaProject\\My project\\Assets\\Scripts\\Scripts\\Camera\\ThirdPersonCameraController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Scripts\\Camera\\ThirdPersonCameraController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "Title": "ArkenPlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Gabri\\OneDrive\\Documents\\GitHub\\ArkeniaProject\\My project\\Assets\\Scripts\\Scripts\\Player\\ArkenPlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Scripts\\Player\\ArkenPlayerController.cs",
+              "ToolTip": "C:\\Users\\Gabri\\OneDrive\\Documents\\GitHub\\ArkeniaProject\\My project\\Assets\\Scripts\\Scripts\\Player\\ArkenPlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Scripts\\Player\\ArkenPlayerController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAqwJEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T00:20:23.615Z",
+              "WhenOpened": "2025-11-05T02:20:41.882Z",
               "EditorCaption": ""
             }
           ]

@@ -1,34 +1,37 @@
 using UnityEngine;
 
+/// <summary>
+/// Constant-speed third-person follow camera.
+/// Follows the target at a fixed distance and height and rotates at a fixed angular speed.
+/// </summary>
 public class ThirdPersonCameraController : MonoBehaviour
 {
-    [Header("Target")]
+    [Header("Target to follow")]
     public Transform Target;
 
     [Header("Framing")]
     public float FollowDistance = 5.5f;
     public float HeightOffset = 2.0f;
 
-    [Header("Smoothing (0 = snap, higher = smoother)")]
-    public float PositionDamping = 0.18f;
-    public float RotationDamping = 0.12f;
-
-    private Vector3 _vel;
+    [Header("Speeds")]
+    public float PositionSpeed = 5.0f;           // units / sec
+    public float RotationSpeedDegPerSec = 180f;  // deg / sec
 
     void LateUpdate()
     {
-        if (!Target) return;
+        if (Target == null) return;
 
-        // desired camera position behind target
         Vector3 desiredPos = Target.position
                            - Target.forward * FollowDistance
                            + Vector3.up * HeightOffset;
 
-        // smooth position (exponential-like)
-        transform.position = Vector3.SmoothDamp(transform.position, desiredPos, ref _vel, PositionDamping);
+        transform.position = Vector3.MoveTowards(
+            transform.position, desiredPos, PositionSpeed * Time.deltaTime);
 
-        // look at the target smoothly
-        var desiredRot = Quaternion.LookRotation(Target.position + Vector3.up * 1.0f - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, desiredRot, 1f - Mathf.Exp(-RotationDamping * Time.deltaTime));
+        Vector3 lookPoint = Target.position + Vector3.up * 1.0f;
+        Quaternion desiredRot = Quaternion.LookRotation(lookPoint - transform.position, Vector3.up);
+
+        transform.rotation = Quaternion.RotateTowards(
+            transform.rotation, desiredRot, RotationSpeedDegPerSec * Time.deltaTime);
     }
 }
