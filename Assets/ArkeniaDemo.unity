@@ -1942,6 +1942,7 @@ GameObject:
   - component: {fileID: 1744589538}
   - component: {fileID: 1744589534}
   - component: {fileID: 1744589539}
+  - component: {fileID: 9920000001}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4484,6 +4485,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9920000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744589532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd100000000000000000000000000001, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAtPointOnStart
+  spawnPoint: {fileID: 9910000002}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
